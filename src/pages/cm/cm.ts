@@ -34,6 +34,7 @@ export class Cm {
     // input.style.minWidth = "4000px";
     let _this = this;
     this.plusValue = window.innerWidth/2/150;
+    this.selectedValue = this.plusValue.toFixed(1);
     this.scroll.addScrollEventListener((event) => {
       console.log(event.target.scrollLeft);
      _this.calcMesurement(event.target.scrollLeft);
