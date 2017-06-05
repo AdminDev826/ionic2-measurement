@@ -1,41 +1,18 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="custom">
     <ion-title>
-      Ionic Blank
+      Measurement
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <div class="header">Measure around your <strong>chest</strong> at its largest point</div>
-  <div class="circle-text">
-    <div>
-      <label class="circle-size">127.0</label>  
-      <span style="color: darkgray;">cm</span>  
-    </div>
-  </div>
-  <div class="arrow-down"></div>
-  <ion-scroll class="ruler-content" id="ruler_content" scrollX="true">
-    <div class="ruler">
-      <ul class="stick-container">
-        <li class="stick" *ngFor="let p of counts">
-          <ul class="minor-stick-container">
-            <li class="minor-stick"></li>
-            <li class="minor-stick"></li>
-            <li class="minor-stick"></li>
-            <li class="minor-stick"></li>
-            <li class="minor-stick"></li>
-            <li class="minor-stick"></li>
-            <li class="minor-stick"></li>
-            <li class="minor-stick"></li>
-            <li class="minor-stick"></li>
-            <li class="minor-stick"></li>
-            <li class="minor-stick"></li>
-          </ul>
-          <span class="stick-value">{{p}}</span>
-        </li>
-      </ul>
-    </div>
-  </ion-scroll>
-  
+
+  <ion-card style="margin-top: 50%;" (click)="gotoCM()">
+    <ion-card-title>CM</ion-card-title>
+  </ion-card>
+  <ion-card (click)="gotoKg()">
+    <ion-card-title>Kg</ion-card-title>
+  </ion-card>
+ 
 </ion-content>

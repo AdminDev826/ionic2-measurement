@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Cm } from '../cm/cm';
+import { Kg } from "../kg/kg";
+
 
 @Component({
   selector: 'page-home',
@@ -7,18 +10,13 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  counts = [];
-
   constructor(public navCtrl: NavController) {
-    this.init();
   }
-  init() {
-    for(var i = 0; i < 200; i++){
-      this.counts.push(i);
-    }
+  gotoCM(){
+    this.navCtrl.push(Cm);
   }
-  ngAfterViewInit() {
-    // var input = document.getElementById('ruler_content');
-    // input.style.minWidth = "4000px";
+  gotoKg(){
+    this.navCtrl.push(Kg);
   }
+
 }

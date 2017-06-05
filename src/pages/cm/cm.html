@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>
+      Right Thigh
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="header">Measure around your <strong>upper right leg</strong> at its fullest point</div>
+  <div class="circle-text">
+    <div>
+      <label class="circle-size">{{selectedValue}}</label>  
+      <span style="color: darkgray;">cm</span>  
+    </div>
+  </div>
+  <div class="arrow-down"></div>
+  <ion-scroll class="ruler-content" id="ruler_content" scrollX="true">
+    <div class="ruler">
+      <ul class="stick-container">
+        <li class="stick" *ngFor="let p of counts">
+          <ul class="minor-stick-container">
+            <li class="minor-stick"></li>
+            <li class="minor-stick"></li>
+            <li class="minor-stick"></li>
+            <li class="minor-stick"></li>
+            <li class="minor-stick"></li>
+            <li class="minor-tall"></li>
+            <li class="minor-stick"></li>
+            <li class="minor-stick"></li>
+            <li class="minor-stick"></li>
+            <li class="minor-stick"></li>
+            <li class="minor-stick"></li>
+          </ul>
+          <span class="stick-value">{{p}}</span>
+        </li>
+      </ul>
+    </div>
+  </ion-scroll>
+  
+</ion-content>
